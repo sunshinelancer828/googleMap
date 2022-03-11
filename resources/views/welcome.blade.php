@@ -13,8 +13,8 @@
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Nmq3eS_qlblGnuJmAIDyLq9tbJw9_cQ&libraries=places&region=DE&language=de"></script>
         <div id="root" style="height: 100%;"></div>
         <div></div>
-        <div></div>
-        <div></div>
+        <p></p>
+        <p></p>
         <div></div>
         <script src="{{ asset('js/manifest.js') }}"></script>
         <script src="{{ asset('js/vendor.js') }}"></script>
