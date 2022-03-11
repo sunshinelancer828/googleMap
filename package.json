@@ -1,0 +1,32 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.16.7",
+        "axios": "^0.21",
+        "browser-sync": "^2.27.7",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "jquery": "^3.6.0",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "react": "^16.14.0",
+        "react-dom": "^16.14.0",
+        "react-script": "^2.0.5",
+        "react-scripts": "^5.0.0"
+    },
+    "proxy": "https://lak-bw-portal.notdienst-portal.de",
+    "dependencies": {
+        "next-qrcode": "^1.1.0",
+        "stream": "^0.0.2",
+        "zlib": "^1.0.5"
+    }
+}

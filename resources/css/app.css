@@ -1,0 +1,400 @@
+html {
+    height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    height: 100%;
+    width: 100%;
+    padding-bottom: 26px;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    font-display: block;
+    overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
+    margin: 0px;  /*removes default style*/
+}
+
+canvas {
+    width: 70% !important;
+    height: 70% !important;
+}
+
+h1{
+    margin: 0px 0px 8px 0px;
+    font-size: 300%;
+}
+h2{
+    margin: 0px 0px 8px 0px;
+    font-size: 160%;
+}
+h3{
+    margin: 0px 0px 8px 0px;
+    font-size: 200%;
+}
+h4{
+    margin: 0px 0px 8px 0px;
+    font-size: 120%;
+}
+h5{
+    margin: 0px 0px 8px 0px;
+    font-size: 100%;
+}
+
+.row{
+    width:100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.row:before, .row:after{
+    display: none;
+}
+
+.container{
+	clear:both;
+}
+
+.pharmacyBox{
+    padding-bottom: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5), 0 4px 20px 0 rgba(0,0,0,0);
+    background-color: #A30030;
+    position: relative;
+    height: 100%;
+}
+
+.pharmacyBoxRed{
+    padding-bottom: 10px;
+    background-color: #A30030;
+    padding-left: 0.8vw;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5), 0 4px 20px 0 rgba(0,0,0,0);
+    position: relative;
+    height: 100%;
+}
+
+.pharmacyName{
+    background-color: #A30030;
+    color: #FFFFFF;
+    padding-left: 0.8vw;
+}
+.pharmacyName h2{
+    color: #FFFFFF;
+    line-height: 1.5;
+}
+.pharmacyName span{
+    color: #FFFFFF;
+}
+.pharmacyBoxRed h1{
+    color: #FFFFFF;
+}
+.pharmacyAdress{
+    padding-left: 0.8vw;
+    margin-bottom: 8px;
+}
+
+.pharmacyFooter{
+    color: #FFFFFF;
+    background-color: #A30030;
+    padding-right: 0.8vw;
+    background-clip: padding-box;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+}
+h5.fitSmall {
+    padding-left: 24px;
+}
+.pharmacyFooter h5{
+    margin: 0px;
+    line-height: 1.5;
+}
+.siteHeader{
+	color:white;
+    display: inline;
+}
+
+.notdienstanzeige{
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#header{
+	background-color:#A30030;
+    flex-shink: 0;
+}
+
+#logo{
+    margin: auto;
+    width: 100%;
+    max-width: 50%;
+    min-height:1px; /*Notwendig für IE, damit max-width funktioniert*/
+    height: auto;
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 99999;
+    font-size: 16px;
+    background-color:#BBBBBB;
+}
+
+#state{
+	text-align: right;
+}
+
+#rest{
+    flex:1;
+    background-image: url('../img/lak-logo.jpg');
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    background-size:75%;
+}
+
+#lastRefresh{
+    padding: 1px;
+}
+
+/*Displays im Hochformat(Breite kleiner als Höhe)*/
+@media (orientation: portrait) {
+
+    body{
+        font-size: 2.3vw;
+    }
+    .col-md-6{
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .mapsContainer {
+        display: none;
+    }
+
+}
+/*Displays im Breitformat(Breite größer als Höhe)*/
+@media (orientation: landscape) {
+    body{
+        font-size: 1.3vw;
+    }
+    .col-md-6{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .l-50 {
+        left: 50%;
+    }
+
+    #header{
+        text-align: center;
+    }
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.redBackground {
+    background-color: #A30030;
+    color: #ffffff;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.h-100v {
+    height: 100vh;
+}
+
+
+.w-100 {
+    width: 100%;
+}
+
+.pb-24 {
+    padding-bottom: 24px;
+}
+
+.pbt-10 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.h-25 {
+    height: 25%;
+}
+
+.mapsContainer {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+}
+
+.col-auto {
+    position: relative;
+    min-height: 1px;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+}
+
+.col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.qrCode {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width:5px 5px 5px 5px;
+    border-style:solid;
+    border-color:#ffffff;
+}
+
+.qrCode>img {
+    width: 9vh;
+}
+
+.f-left{
+    float: left;
+    height: calc(2.6vw + 8px);
+}
+
+.clock{
+    position: absolute;
+    font-weight: 400;
+    top: 0;
+    right: 10px;
+    color: white;
+}
+
+@media screen and (max-width: 1900px) {
+    .fit {
+        font-size: 1.5vw;
+    }
+    .pharmacyAdress {
+        font-size: 1.1vw;
+    }
+    .fitSmall {
+        font-size: 1.3vw;
+    }
+}
+
+@media screen and (min-width: 770px) {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .first {
+        text-align: left;
+        padding-left: 10px;
+    }
+    .second {
+        padding-right: 10px;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 1706px) {
+}
+
+@media screen and (max-width: 1300px) {
+    .fit {
+        font-size: 1.7vw;
+    }
+    .pharmacyAdress {
+        font-size: 1.4vw;
+    }
+    .fitSmall {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+}
+
+@media screen and (max-width: 995px) {
+}
+
+@media screen and (max-width: 750px) {
+    .fit {
+        font-size: 2.4vw;
+    }
+    .pharmacyAdress {
+        font-size: 1.9vw;
+    }
+    .fitSmall {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .fit {
+        font-size: 2.5vw;
+    }
+    .pharmacyAdress {
+        font-size: 2vw;
+    }
+    .fitSmall {
+        font-size: 2.1vw;
+    }
+}
+
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 1000px) {
+    .clock {
+        left: 0;
+        top: 2px;
+        font-size: 150%;
+    }
+    #header {
+        padding-top: 20px;
+        text-align: center;
+    }
+    .pos-abs {
+        height: 96%;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .pos-abs {
+        height: 95%;
+    }
+    .first {
+        font-size: 12px;
+    }
+    .second {
+        font-size: 12px;
+    }
+  }
+
+
+  @media screen and (max-width: 500px) {
+
+    .fit {
+        font-size: 3.3vw;
+    }
+    .pharmacyAdress {
+        font-size: 2.8vw;
+    }
+    .fitSmall {
+        font-size: 2.9vw;
+    }
+  }
