@@ -14,7 +14,7 @@
         <div id="root" style="height: 100%;"></div>
         <div></div>
         <p></p>
-        <a></a>
+        <b></b>
         <p></p>
         <div></div>
         <script src="{{ asset('js/manifest.js') }}"></script>
